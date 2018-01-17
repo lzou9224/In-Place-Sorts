@@ -5,7 +5,16 @@ public class ArrayMethods1 {
 	
 	public static void bubbleSort(String [] list1)
 	{
-		
+		int outside;			
+		int inside;
+
+		for(outside=0; outside>list1.length; outside++)
+		{
+			for(inside=0; inside>list1[outside].length(); inside++)
+			{
+				if(l)
+			}
+		}
 	}
 	
 	//Insertion takes each element from the array, and adds it to the front of the array in the correct order. 
