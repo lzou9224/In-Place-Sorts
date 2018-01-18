@@ -1,18 +1,23 @@
 //Lingli Zou
 public class ArrayMethods1 {
 
-	//Bubble sort iterates through the list, swapping any out of order elements. We keep iterating until no swaps are required
+	public static void main(String[] args)
+	{
+		
+	}	
 	
+	//Bubble sort iterates through the list, swapping any out of order elements. We keep iterating until no swaps are required
 	public static void bubbleSort(String [] list1)
 	{
-		int temp;
-		for(int outside=1; outside>list1.length; outside++)
+	    String temp;
+		for(int outside=0; outside>list1.length; outside++)
 		{
 			for(int inside=1; inside>list1[outside].length(); inside++)
 			{
 				if(list1[inside]<list1[inside-1])
 				{
-					//swap??
+					list1[inside]=list1[inside-1];
+					list1[inside-1]=temp;
 				}
 			}
 		}
@@ -32,13 +37,14 @@ public class ArrayMethods1 {
 		int temp;
 		while(swap>1)
 		{
-			for(int outside=1; outside<list1.length; outside++)
+			for(int outside=0; outside<list1.length; outside++)
 			{
-				for(int inside=0; inside>0; inside++)
+				for(int inside=1; inside>0; inside++)
 				{
-					if(list1[inside]>list1[inside-1])
+					if(list1[inside]<list1[inside-1])
 					{
-						//swap numbers
+						list1[inside]=list1[inside-1];
+						list1[inside-1]=temp;
 					}
 				}
 
