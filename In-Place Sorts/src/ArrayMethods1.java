@@ -4,7 +4,7 @@ public class ArrayMethods1 {
 
 	public static void main(String[] args)
 	{
-		
+		String list1 []= {"HAHAHA, BABABA, HEHEHE"};
 	}	
 	
 	//Bubble sort iterates through the list, swapping any out of order elements. We keep iterating until no swaps are required
