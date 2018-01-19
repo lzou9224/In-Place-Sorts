@@ -1,4 +1,5 @@
 //Lingli Zou
+//Lab 3.1 In Place Sort
 public class ArrayMethods1 {
 
 	public static void main(String[] args)
@@ -10,15 +11,17 @@ public class ArrayMethods1 {
 	public static void bubbleSort(String [] list1)
 	{
 	    String temp;
-		for(int outside=0; outside>list1.length; outside++)
-		{
-			for(int inside=1; inside>list1[outside].length(); inside++)
+	    for(int inside=0; inside<list1.length; inside++)
+	    {
+	    	for(int outside=0; outside>list1.length-1; outside++)
 			{
-				if(list1[inside]<list1[inside-1])
-				{
-					list1[inside]=list1[inside-1];
-					list1[inside-1]=temp;
+	    		if(list1[inside].compareTo(list1[inside+1])>0)
+	    		{
+	    			temp=list1[inside];
+	    			list1[inside]=list1[inside+1];
+	    			list1[inside+1]=temp;
 				}
+				
 			}
 		}
 	}
@@ -35,6 +38,7 @@ public class ArrayMethods1 {
 	public static void selectionSort(double [] list1)
 	{
 		int temp;
+		boolean swap;
 		while(swap>1)
 		{
 			for(int outside=0; outside<list1.length; outside++)
