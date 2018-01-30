@@ -60,7 +60,9 @@ public class ArrayMethods1 {
 				{
 					if(list1[inside]>list1[outside])
 					{
-						list1[inside]=list1[outside];
+						temp=list1[inside];
+		    			list1[inside]=list1[inside+1];
+		    			list1[inside+1]=temp;
 					}
 				}
 			}
