@@ -5,7 +5,7 @@ public class ArrayMethods1 {
 
 	public static void main(String[] args)
 	{
-		String[] bubbleS = { "Chocolate", "Candy", "Sweet", "Dessert" };		
+		String[] bubbleS = { "Chocolate", "Apple", "Sweet", "Dessert" };		
 		double[] selectionS = { 1.0,6.0,3.0,9.0,0.0 };		
 		int[] insertionS = { 1,6,7,0,5 };
 		
@@ -13,7 +13,8 @@ public class ArrayMethods1 {
 		selectionSort(selectionS);
 		insertionSort(insertionS);
 		
-		System.out.println(bubbleSort);
+		for( String s: bubbleS)
+		System.out.println(s);
 
 	}	
 	
@@ -32,6 +33,7 @@ public class ArrayMethods1 {
 	    		{
 	    			if(list1[inside].compareTo(list1[inside+1])>0)
 	    			{
+	    				swap++;
 	    				temp=list1[inside];
 	    				list1[inside]=list1[inside+1];
 	    				list1[inside+1]=temp;
@@ -87,8 +89,6 @@ public class ArrayMethods1 {
 			}
 		}
 	}
-	
 
-	
 
 }
