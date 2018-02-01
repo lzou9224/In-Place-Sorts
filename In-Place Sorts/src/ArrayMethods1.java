@@ -5,17 +5,16 @@ public class ArrayMethods1 {
 
 	public static void main(String[] args)
 	{
-		String list3[]=;
-		bubbleSort(list1);
+		String[] bubbleS = { "Chocolate", "Candy", "Sweet", "Dessert" };		
+		double[] selectionS = { 1.0,6.0,3.0,9.0,0.0 };		
+		int[] insertionS = { 1,6,7,0,5 };
 		
-		int list1[]= {1,6,7,9,0,5};		
-		insertionSort(list1);
-
-		double list2[]= {1,6,7,9,0,5};
-		selectionSort(list2);
-
-		System.out.println();
+		bubbleSort(bubbleS); 
+		selectionSort(selectionS);
+		insertionSort(insertionS);
 		
+		System.out.println(bubbleSort);
+
 	}	
 	
 	//Bubble sort iterates through the list, swapping any out of order elements. 
