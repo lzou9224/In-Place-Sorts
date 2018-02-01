@@ -70,9 +70,22 @@ public class ArrayMethods1 {
 	//We need to keep track of where we are inserting elements as we sort.
 	public static void insertionSort(int[] list1)
 	{
+		int temp=0;
 		for(int outside=1; outside<list1.length; outside++)
 		{
-			
+			for(int inside=outside; inside>0; inside--)
+			{
+				if(list1[inside]<list1[inside-1])
+				{
+					temp=list1[inside-1];
+					list1[inside-1]=list1[inside];
+					list1[inside]=temp;
+				}
+				else
+				{
+					break;
+				}
+			}
 		}
 	}
 	
