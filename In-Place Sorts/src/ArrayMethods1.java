@@ -1,3 +1,4 @@
+import java.util.Arrays;
 //Lingli Zou
 //2/1/2017
 //Lab 3.1: In Place Sort
@@ -5,16 +6,33 @@ public class ArrayMethods1 {
 
 	public static void main(String[] args)
 	{
-		String[] bubbleS = { "Chocolate", "Apple", "Sweet", "Dessert" };		
-		double[] selectionS = { 1.0,6.0,3.0,9.0,0.0 };		
+		String[] bubbleS = { "Coconut", "Apple", "Eggplant", "Banana", "Dewberry" };		
+		double[] selectionS = { 1.2,6.3,3.5,9.9,0.0 };		
 		int[] insertionS = { 1,6,7,0,5 };
 		
-		bubbleSort(bubbleS); 
-		selectionSort(selectionS);
-		insertionSort(insertionS);
+		//Bubble Sort Test
+		long start = System.nanoTime();
+		bubbleSort(bubbleS);
+		long end = System.nanoTime();
+		long time = end - start;
+		System.out.println("Bubble Sort Took : " + time + " nanoseconds");
+		System.out.println(Arrays.toString(bubbleS));
 		
-		for( String s: bubbleS)
-		System.out.println(s);
+		//Selection Sort Test
+		start = System.nanoTime();
+		selectionSort(selectionS);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("Selection Sort Took : " + time + " nanoseconds");
+		System.out.println(Arrays.toString(selectionS));
+		
+		//Insertion Sort Test
+		start = System.nanoTime();
+		insertionSort(insertionS);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("Insertion Sort Took : " + time + " nanoseconds");
+		System.out.println(Arrays.toString(insertionS));
 
 	}	
 	
@@ -27,11 +45,11 @@ public class ArrayMethods1 {
 	    int swap=1000;
 	    while(swap>0) {
 	    	swap=0;
-	    	for(int inside=0; inside<list1.length; inside++)
+	    	for(int outside=0; outside<list1.length-1; inside++)
 	    	{
 	    		for(int outside=0; outside>list1.length-1; outside++)
 	    		{
-	    			if(list1[inside].compareTo(list1[inside+1])>0)
+	    			if(list1[inside].compareTo(list1[inside+1])<0)
 	    			{
 	    				swap++;
 	    				temp=list1[inside];
