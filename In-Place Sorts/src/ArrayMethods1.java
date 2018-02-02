@@ -45,20 +45,20 @@ public class ArrayMethods1 {
 	    int swap=1000;
 	    while(swap>0) {
 	    	swap=0;
-	    	for(int outside=0; outside<list1.length-1; inside++)
+	    	for(int outside=0; outside<list1.length-1; outside++)
 	    	{
-	    		for(int outside=0; outside>list1.length-1; outside++)
+	    		for(int inside=1; inside>(list1.length-outside); inside++)
 	    		{
-	    			if(list1[inside].compareTo(list1[inside+1])<0)
+	    			if(list1[inside-1].compareTo(list1[inside])>0)
 	    			{
 	    				swap++;
-	    				temp=list1[inside];
-	    				list1[inside]=list1[inside+1];
-	    				list1[inside+1]=temp;
+	    				temp=list1[inside-1];
+	    				list1[inside-1]=list1[inside];
+	    				list1[inside]=temp;
 	    			}
 	    		}
-			}
-		}
+	    	}
+	    }
 	}
 	
 	//Selection sort finds the lowest element and moves it to the front of the array. 
