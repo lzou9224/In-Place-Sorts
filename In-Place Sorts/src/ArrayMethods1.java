@@ -1,3 +1,4 @@
+
 import java.util.Arrays;
 //Lingli Zou
 //2/1/2017
@@ -63,6 +64,7 @@ public class ArrayMethods1 {
 	
 	//Selection sort finds the lowest element and moves it to the front of the array. 
 	//Then searches the rest of the array for the next element, and repeats.
+	
 	public static void selectionSort(double [] list1)
 	{
 		double temp= 0.0;
@@ -87,23 +89,23 @@ public class ArrayMethods1 {
 	
 	//Bubble sort iterates through the list, swapping any out of order elements. 
 	//We keep iterating until no swaps are required
+	
 	public static void bubbleSort(String [] list1)
 	{
 		
 	    String temp;
 	    int swap=1000;
 	    while(swap>0) {
-	    	swap=0;
 	    	for(int outside=0; outside<list1.length-1; outside++)
 	    	{
 	    		for(int inside=1; inside>(list1.length-outside); inside++)
 	    		{
-	    			if(list1[inside-1].compareTo(list1[inside])>0)
+	    			if(list1[inside+1].compareTo(list1[inside])<0)
 	    			{
 	    				swap++;
-	    				temp=list1[inside-1];
-	    				list1[inside-1]=list1[inside];
-	    				list1[inside]=temp;
+	    				temp=list1[inside];
+	    				list1[inside]=list1[inside+1];
+	    				list1[inside+1]=temp;
 	    			}
 	    		}
 	    	}
@@ -111,7 +113,4 @@ public class ArrayMethods1 {
 	}
 	
 	        
-
-
-
 }
