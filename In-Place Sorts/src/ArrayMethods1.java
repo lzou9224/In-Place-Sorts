@@ -70,14 +70,17 @@ public class ArrayMethods1 {
 		double temp= 0.0;
 		int smallest=0;
 	
-		for(int outside=0; outside<list1.length-1; outside++)
+		for(int outside=0; outside<list1.length; outside++)
 		{
-			outside=smallest;
-			for(int inside=1; inside<list1.length-1; inside++)
+			//System.out.println("Outside: " + outside);
+			smallest=outside;
+			for(int inside=1+outside; inside<list1.length; inside++)
 			{
 				if(list1[inside]<list1[smallest])
 				{
-					smallest = inside;
+					smallest = inside;		
+					//System.out.println(smallest);
+
 				}
 			}
 			temp=list1[smallest];
@@ -95,22 +98,20 @@ public class ArrayMethods1 {
 		
 	    String temp;
 	    int swap=1000;
-	    while(swap>0) {
+	    while(swap>0) 
+	    {
+	    	swap=0;
 	    	for(int outside=0; outside<list1.length-1; outside++)
 	    	{
-	    		for(int inside=1; inside>(list1.length-outside); inside++)
+	    		if(list1[outside+1].compareTo(list1[outside])<0)
 	    		{
-	    			if(list1[inside+1].compareTo(list1[inside])<0)
-	    			{
-	    				swap++;
-	    				temp=list1[inside];
-	    				list1[inside]=list1[inside+1];
-	    				list1[inside+1]=temp;
-	    			}
+	    			swap++;
+	    			temp=list1[outside];
+	    			list1[outside]=list1[outside+1];
+	    			list1[outside+1]=temp;
 	    		}
 	    	}
 	    }
+	    
 	}
-	
-	        
 }
